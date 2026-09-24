@@ -13,6 +13,8 @@
     <a href="interaktif.html">Interaktif</a>
   </nav>
   <h1 id="judulHalaman">Halaman Interaktif Eug</h1>
+  <p id="teks">Teks ini bisa berubah!</p>
+  <button onclick="ubahBiru()">Ubah ke Biru</button>
   <script>
     const judul = document.getElementById("judulHalaman");
     judul.style.color = "red";
@@ -21,6 +23,9 @@
       return "Halo, " + nama + "!";
     }
     console.log(sapa("Jeni"));
+    function ubahBiru() {
+      document.getElementById("teks").style.color = "blue";
+    }
   </script>
 </body>
 </html>
