@@ -20,6 +20,13 @@
     <input type="text" id="inputNama" placeholder="Nama Anda...">
     <button onclick="tampilkanNama()">Tampilkan</button>
   </div>
+  <div>
+    <h3>Kalkulator Hitung Luas Persegi</h3>
+    <label for="inputSisi">Masukkan Panjang Sisi (cm):</label>
+    <input type="number" id="inputSisi" placeholder="Contoh: 5">
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <p id="hasilHitung" style="margin-top: 10px; font-weight: bold; color: #4f46e5;"></p>
+  </div>
   <script>
     const judul = document.getElementById("judulHalaman");
     judul.style.color = "red";
@@ -37,6 +44,16 @@
         alert("Silakan isi nama dulu.");
       } else {
         alert("Halo, " + nama + "!");
+      }
+    }
+    function hitungLuas() {
+      const sisi = document.getElementById("inputSisi").value;
+      if (sisi === "" || sisi <= 0) {
+        alert("Silakan masukkan angka sisi yang valid (lebih dari 0)!");
+      } else {
+        const luas = sisi * sisi;
+        alert("Luas persegi dengan sisi " + sisi + " cm adalah " + luas + " cm²");
+        document.getElementById("hasilHitung").innerHTML = "Hasil: " + luas + " cm²";
       }
     }
   </script>
