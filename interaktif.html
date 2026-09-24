@@ -15,6 +15,11 @@
   <h1 id="judulHalaman">Halaman Interaktif Eug</h1>
   <p id="teks">Teks ini bisa berubah!</p>
   <button onclick="ubahBiru()">Ubah ke Biru</button>
+  <div>
+    <label for="inputNama">Masukkan Nama Anda:</label>
+    <input type="text" id="inputNama" placeholder="Nama Anda...">
+    <button onclick="tampilkanNama()">Tampilkan</button>
+  </div>
   <script>
     const judul = document.getElementById("judulHalaman");
     judul.style.color = "red";
@@ -25,6 +30,14 @@
     console.log(sapa("Jeni"));
     function ubahBiru() {
       document.getElementById("teks").style.color = "blue";
+    }
+    function tampilkanNama() {
+      const nama = document.getElementById("inputNama").value;
+      if (nama.trim() === "") {
+        alert("Silakan isi nama dulu.");
+      } else {
+        alert("Halo, " + nama + "!");
+      }
     }
   </script>
 </body>
