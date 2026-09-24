@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran - Eug</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="profil.html">Profil</a> |
+    <a href="form.html">Form</a>
+  </nav>
+  <h1 style="text-align: center;">Form Pendaftaran Mahasiswa</h1>
+  <form action="#" method="post">
+    <div>
+      <label for="inputNama">Nama Lengkap:</label>
+      <input type="text" id="inputNama" name="nama" placeholder="Nama Lengkap" required maxlength="50">
+    </div>
+    <div>
+      <label>Jenis Kelamin:</label>
+      <input type="radio" id="jkL" name="jk" value="Laki-laki" required>
+      <label for="jkL" style="display:inline;">Laki-laki</label>
+      <input type="radio" id="jkP" name="jk" value="Perempuan" required>
+      <label for="jkP" style="display:inline;">Perempuan</label>
+    </div>
+    <div>
+      <label for="prodi">Program Studi:</label>
+      <select id="prodi" name="prodi" required>
+        <option value="">~ Pilih Program Studi ~</option>
+        <option value="Informatika">Informatika</option>
+        <option value="Sistem Informasi">Sistem Informasi</option>
+        <option value="Teknik Industri">Teknik Industri</option>
+      </select>
+    </div>
+    <div>
+      <label for="inputEmail">Email:</label>
+      <input type="email" id="inputEmail" name="email" placeholder="akun@gmail.com" required>
+    </div>
+    <div>
+      <label for="alasan">Alasan Mendaftar:</label>
+      <textarea id="alasan" name="alasan" rows="4" placeholder="Tuliskan alasan Anda..." required></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Kirim Data">
+    </div>
+  </form>
+</body>
+</html>
